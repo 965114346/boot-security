@@ -1,9 +1,11 @@
 spring:
+  application:
+    name: boot-server
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/boot_security?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
     username: root
-    password: root
+    password: 232511
     druid:
       initialSize: 5
       minIdle: 5
@@ -71,4 +73,4 @@ token:
     seconds: 7200
   jwtSecret: (XIAO:)_$^11244^%$_(WEI:)_@@++--(LAO:)_++++_.sds_(SHI:)
 server:
-  port: 8080
+  port: 8081
