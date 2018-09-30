@@ -3,14 +3,15 @@ package com.boot.security.server.model;
 import java.util.Date;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
-@Getter
-@Setter
-@ToString
-public class SysUser extends BaseEntity<Long> {
+@Data
+public class SysUser {
+
+	/**
+	 * 主键
+	 */
+	private Long id;
 
 	/**
 	 * 用户名
@@ -67,6 +68,16 @@ public class SysUser extends BaseEntity<Long> {
 	 * 介绍
 	 */
 	private String intro;
+
+	/**
+	 * 创建时间
+	 */
+	private Date createTime;
+
+	/**
+	 * 更新时间
+	 */
+	private Date updateTime;
 
 	public interface Status {
 		int DISABLED = 0;

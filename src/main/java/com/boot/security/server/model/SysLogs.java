@@ -1,43 +1,45 @@
 package com.boot.security.server.model;
 
-public class SysLogs extends BaseEntity<Long> {
+import lombok.Data;
 
-	private static final long serialVersionUID = -7809315432127036583L;
+import java.util.Date;
+
+@Data
+public class SysLogs {
+
+	/**
+	 * 主键
+	 */
+	private Long id;
+
+	/**
+	 * 用户
+	 */
 	private SysUser user;
+
+	/**
+	 * 模块
+	 */
 	private String module;
+
+	/**
+	 * 标记
+	 */
 	private Boolean flag;
+
+	/**
+	 * 备注
+	 */
 	private String remark;
 
-	public SysUser getUser() {
-		return user;
-	}
+	/**
+	 * 创建时间
+	 */
+	private Date createTime;
 
-	public void setUser(SysUser user) {
-		this.user = user;
-	}
-
-	public String getModule() {
-		return module;
-	}
-
-	public void setModule(String module) {
-		this.module = module;
-	}
-
-	public Boolean getFlag() {
-		return flag;
-	}
-
-	public void setFlag(Boolean flag) {
-		this.flag = flag;
-	}
-
-	public String getRemark() {
-		return remark;
-	}
-
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
+	/**
+	 * 更新时间
+	 */
+	private Date updateTime;
 
 }

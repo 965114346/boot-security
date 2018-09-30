@@ -1,26 +1,34 @@
 package com.boot.security.server.model;
 
-public class Role extends BaseEntity<Long> {
+import lombok.Data;
 
-	private static final long serialVersionUID = -3802292814767103648L;
+import java.util.Date;
 
+@Data
+public class Role {
+
+	/**
+	 * 主键
+	 */
+	private Long id;
+
+	/**
+	 * 权限名称
+	 */
 	private String name;
 
+	/**
+	 * 权限描述
+	 */
 	private String description;
 
-	public String getName() {
-		return name;
-	}
+	/**
+	 * 创建时间
+	 */
+	private Date createTime;
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
+	/**
+	 * 更新时间
+	 */
+	private Date updateTime;
 }
