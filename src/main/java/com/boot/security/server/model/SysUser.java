@@ -5,6 +5,10 @@ import java.util.Date;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
+/**
+ * 用户实体类
+ * Created by yangyang.zhang on 2018/9/30 23:21
+ */
 @Data
 public class SysUser {
 

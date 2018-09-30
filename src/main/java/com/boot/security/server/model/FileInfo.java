@@ -1,52 +1,53 @@
 package com.boot.security.server.model;
 
-public class FileInfo extends BaseEntity<String> {
+import lombok.Data;
 
-	private static final long serialVersionUID = -5761547882766615438L;
+import java.util.Date;
 
+/**
+ * 文件信息实体类
+ * Created by yangyang.zhang on 2018/9/30 23:27
+ */
+@Data
+public class FileInfo {
+
+	/**
+	 * 主键
+	 */
+	private String id;
+
+	/**
+	 * 内容类型
+	 */
 	private String contentType;
-	private long size;
+
+	/**
+	 * 文件大小
+	 */
+	private Long size;
+
+	/**
+	 * 文件路径
+	 */
 	private String path;
+
+	/**
+	 * url
+	 */
 	private String url;
+
+	/**
+	 * 类型
+	 */
 	private Integer type;
 
-	public String getContentType() {
-		return contentType;
-	}
+	/**
+	 * 创建时间
+	 */
+	private Date createTime;
 
-	public void setContentType(String contentType) {
-		this.contentType = contentType;
-	}
-
-	public long getSize() {
-		return size;
-	}
-
-	public void setSize(long size) {
-		this.size = size;
-	}
-
-	public String getPath() {
-		return path;
-	}
-
-	public void setPath(String path) {
-		this.path = path;
-	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	public Integer getType() {
-		return type;
-	}
-
-	public void setType(Integer type) {
-		this.type = type;
-	}
+	/**
+	 * 更新时间
+	 */
+	private Date updateTime;
 }

@@ -1,34 +1,25 @@
 package com.boot.security.server.model;
 
-public class Dict extends BaseEntity<Long> {
+import lombok.Data;
 
-	private static final long serialVersionUID = -2431140186410912787L;
+import java.util.Date;
+
+@Data
+public class Dict {
+
+	private Long id;
 	private String type;
 	private String k;
 	private String val;
 
-	public String getType() {
-		return type;
-	}
+	/**
+	 * 创建时间
+	 */
+	private Date createTime;
 
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getK() {
-		return k;
-	}
-
-	public void setK(String k) {
-		this.k = k;
-	}
-
-	public String getVal() {
-		return val;
-	}
-
-	public void setVal(String val) {
-		this.val = val;
-	}
+	/**
+	 * 更新时间
+	 */
+	private Date updateTime;
 
 }

@@ -4,6 +4,10 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * 角色实体类
+ * Created by yangyang.zhang on 2018/9/30 23:21
+ */
 @Data
 public class Role {
 

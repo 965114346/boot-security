@@ -1,36 +1,41 @@
 package com.boot.security.server.model;
 
-public class Notice extends BaseEntity<Long> {
+import lombok.Data;
 
-	private static final long serialVersionUID = -4401913568806243090L;
+import java.util.Date;
 
+@Data
+public class Notice {
+
+	/**
+	 * 主键
+	 */
+	private Long id;
+
+	/**
+	 * 标题
+	 */
 	private String title;
+
+	/**
+	 * 内容
+	 */
 	private String content;
+
+	/**
+	 * 状态
+	 */
 	private Integer status;
 
-	public String getTitle() {
-		return title;
-	}
+	/**
+	 * 创建时间
+	 */
+	private Date createTime;
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getContent() {
-		return content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
-
-	public Integer getStatus() {
-		return status;
-	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
+	/**
+	 * 更新时间
+	 */
+	private Date updateTime;
 
 	public interface Status {
 		int DRAFT = 0;

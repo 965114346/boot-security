@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- *
+ * 权限实体类
  * Create By yangyang.zhang on 2018/9/30 16:32
  **/
 @Data

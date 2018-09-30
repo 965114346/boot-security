@@ -1,34 +1,39 @@
 package com.boot.security.server.model;
 
+import lombok.Data;
+
 import java.util.Date;
 
-public class TokenModel extends BaseEntity<String> {
+/**
+ * TokenModel
+ * Created by yangyang.zhang on 2018/9/30 23:20
+ */
+@Data
+public class TokenModel {
 
-	private static final long serialVersionUID = 4566334160572911795L;
+	/**
+	 * 主键
+	 */
+	private String id;
 
 	/**
 	 * 过期时间
 	 */
 	private Date expireTime;
+
 	/**
 	 * LoginUser的json串
 	 */
 	private String val;
 
-	public Date getExpireTime() {
-		return expireTime;
-	}
+	/**
+	 * 创建时间
+	 */
+	private Date createTime;
 
-	public void setExpireTime(Date expireTime) {
-		this.expireTime = expireTime;
-	}
-
-	public String getVal() {
-		return val;
-	}
-
-	public void setVal(String val) {
-		this.val = val;
-	}
+	/**
+	 * 更新时间
+	 */
+	private Date updateTime;
 
 }

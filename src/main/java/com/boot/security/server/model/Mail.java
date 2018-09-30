@@ -1,44 +1,49 @@
 package com.boot.security.server.model;
 
-public class Mail extends BaseEntity<Long> {
+import lombok.Data;
 
-	private static final long serialVersionUID = 5613231124043303948L;
+import java.util.Date;
 
+/**
+ * 邮件实体类
+ * Created by yangyang.zhang on 2018/9/30 23:25
+ */
+@Data
+public class Mail {
+
+	/**
+	 * 主键
+	 */
+	private Long id;
+
+	/**
+	 * 用户id
+	 */
 	private Long userId;
+
+	/**
+	 * 收件人
+	 */
 	private String toUsers;
+
+	/**
+	 * 主题
+	 */
 	private String subject;
+
+	/**
+	 * 内容
+	 */
 	private String content;
 
-	public Long getUserId() {
-		return userId;
-	}
+	/**
+	 * 创建时间
+	 */
+	private Date createTime;
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	public String getToUsers() {
-		return toUsers;
-	}
-
-	public void setToUsers(String toUsers) {
-		this.toUsers = toUsers;
-	}
-
-	public String getSubject() {
-		return subject;
-	}
-
-	public void setSubject(String subject) {
-		this.subject = subject;
-	}
-
-	public String getContent() {
-		return content;
-	}
-
-	public void setContent(String content) {
-		this.content = content;
-	}
+	/**
+	 * 更新时间
+	 */
+	private Date updateTime;
 
 }

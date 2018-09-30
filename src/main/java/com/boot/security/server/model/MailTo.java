@@ -1,34 +1,39 @@
 package com.boot.security.server.model;
 
-public class MailTo extends BaseEntity<Long> {
+import lombok.Data;
 
-	private static final long serialVersionUID = -8238779033956731073L;
+import java.util.Date;
 
+@Data
+public class MailTo {
+
+	/**
+	 * 主键
+	 */
+	private Long id;
+
+	/**
+	 * 邮件id
+	 */
 	private Long mailId;
+
+	/**
+	 * 收件人
+	 */
 	private String toUser;
+
+	/**
+	 * 状态
+	 */
 	private Boolean status;
 
-	public Long getMailId() {
-		return mailId;
-	}
+	/**
+	 * 创建时间
+	 */
+	private Date createTime;
 
-	public void setMailId(Long mailId) {
-		this.mailId = mailId;
-	}
-
-	public String getToUser() {
-		return toUser;
-	}
-
-	public void setToUser(String toUser) {
-		this.toUser = toUser;
-	}
-
-	public Boolean getStatus() {
-		return status;
-	}
-
-	public void setStatus(Boolean status) {
-		this.status = status;
-	}
+	/**
+	 * 更新时间
+	 */
+	private Date updateTime;
 }

@@ -1,8 +1,17 @@
 package com.boot.security.server.model;
 
-public class JobModel extends BaseEntity<Long> {
+import lombok.Data;
 
-	private static final long serialVersionUID = -2458935535811207209L;
+import java.util.Date;
+
+/**
+ *
+ * Created by yangyang.zhang on 2018/9/30 23:29
+ */
+@Data
+public class JobModel {
+
+	private Long id;
 
 	private String jobName;
 
@@ -16,62 +25,16 @@ public class JobModel extends BaseEntity<Long> {
 
 	private Boolean isSysJob;
 
-	private int status;
+	private Integer status;
 
-	public String getJobName() {
-		return jobName;
-	}
+	/**
+	 * 创建时间
+	 */
+	private Date createTime;
 
-	public void setJobName(String jobName) {
-		this.jobName = jobName;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public String getCron() {
-		return cron;
-	}
-
-	public void setCron(String cron) {
-		this.cron = cron;
-	}
-
-	public String getSpringBeanName() {
-		return springBeanName;
-	}
-
-	public void setSpringBeanName(String springBeanName) {
-		this.springBeanName = springBeanName;
-	}
-
-	public String getMethodName() {
-		return methodName;
-	}
-
-	public void setMethodName(String methodName) {
-		this.methodName = methodName;
-	}
-
-	public Boolean getIsSysJob() {
-		return isSysJob;
-	}
-
-	public void setIsSysJob(Boolean isSysJob) {
-		this.isSysJob = isSysJob;
-	}
-
-	public int getStatus() {
-		return status;
-	}
-
-	public void setStatus(int status) {
-		this.status = status;
-	}
+	/**
+	 * 更新时间
+	 */
+	private Date updateTime;
 
 }
